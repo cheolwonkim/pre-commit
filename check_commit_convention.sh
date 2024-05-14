@@ -9,7 +9,7 @@ fi
 COMMIT_MSG_FILE="$1"
 
 # Improved regular expression for Conventional Commits
-CONVENTIONAL_REGEX="^(fix|feat|perf|chore|docs|style|revert|refactor|break|test|ci|bump|Bump version|hotfix|ci-skip|bump-skip)(\([a-z ]+\))?: .+$"
+CONVENTIONAL_REGEX="^(fix|feat|perf|chore|docs|style|revert|refactor|break|test|ci|bump|Bump version|hotfix|ci-skip|bump-skip)(\([a-zA-Z0-9_.\-]+\))?: .+$"
 
 # Check if the commit message matches the conventional commits pattern
 if ! grep -qE "$CONVENTIONAL_REGEX" "$COMMIT_MSG_FILE"; then
